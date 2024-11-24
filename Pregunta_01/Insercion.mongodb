@@ -77,7 +77,7 @@ db.clientes.insertMany(
             apellido: "Martínez",
             fecha_nacimiento: "1988-11-30",
             email: '',
-            categorias: ['']
+            categorias: ''
         },
         {
             _id: "C004",
