@@ -1,0 +1,29 @@
+use("dbClothingStore")
+
+//1. Elimine un documento de la colección prenda a través de “_id”
+db.prendas.deleteOne(
+
+    {_id : ObjectId('67428e780fab35baca5fb1d3')}
+)
+
+//2. Elimine los documentos de las prendas cuyas cantidades de stock sea menor 30.
+db.prendas.deleteMany(
+
+    {
+        stock: { $lt : 30}
+    }
+)
+
+//3. Elimine en la colección clientes los datos de María López
+db.clientes.deleteOne(
+
+    {
+        _id : "C004"
+    }
+)
+
+//4. Elimine todos los documentos de las prendas.
+db.prendas.drop()
+
+//5. Elimine la colección clientes.
+db.clientes.drop()

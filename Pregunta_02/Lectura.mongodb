@@ -1,0 +1,13 @@
+use("dbClothingStore")
+
+//1.	Listar los 3 primeros documentos de prendas.
+db.prendas.find().pretty().limit(3)
+
+//2.	Listar los 2 primeros documentos de clientes.
+db.clientes.find().pretty().limit(2)
+
+//3.	Listar solamente los atributos: nombre, apellido, email y categorías de interés de los clientes.
+db.clientes.find({}, {_id: 0, nombre: 1, apellido: 1, email: 1, categorias: 1})
+
+//4.	Listar las prendas cuya cantidad de stock sea igual o mayor que 50
+db.prendas.find({ stock : {$gte : 50}})

@@ -1,0 +1,100 @@
+//1.	Crear una base de datos llamada dbClothingStore.
+use("dbClothingStore")
+
+//2.	Crear una colección llamada prendas con estructura y documentos a través de la inserción uno por uno.
+db.prendas.insertOne(
+    {
+        nombre: "Camisa Formal",
+        marca: "H&M",
+        categorias: ["Ropa Formal", "Camisas", "Hombres"],
+        stock: 50,
+        precio_unitario: 35.50
+    }
+)
+
+db.prendas.insertOne(
+    {
+        nombre: "Pantalones Jeans",
+        marca: "Levi's",
+        categorias: ["Ropa Casual", "Pantalones", "Unisex"],
+        stock: 100,
+        precio_unitario: 45.00
+    }
+)
+
+db.prendas.insertOne(
+    {
+        nombre: "Vestido de Verano",
+        marca: "Zara",
+        categorias: ["Ropa Casual", "Vestidos", "Mujeres"],
+        stock: 30,
+        precio_unitario: 29.99
+    }
+)
+
+db.prendas.insertOne(
+    {
+        nombre: "Chompa de Lana",
+        marca: "Uniqlo",
+        categorias: ["Ropa de Invierno", "Chompas", "Unisex", "Mujeres"],
+        stock: 75,
+        precio_unitario: 89.99
+    }
+)
+
+db.prendas.insertOne(
+    {
+        nombre: "Casaca de Cuero",
+        marca: "Gucci",
+        categorias: ["Ropa de Invierno", "Unisex"],
+        stock: 20,
+        precio_unitario: 299.99
+    }
+)
+
+//3.	Crear una colección llamada clientes con estructura y documentos a través de la inserción masiva.
+db.clientes.insertMany(
+    [
+        {
+            _id: "C001",
+            nombre: "Juan",
+            apellido: "Pérez",
+            fecha_nacimiento: "1990-05-15",
+            email: "juan.perez@gmail.com",
+            categorias: ["Ropa Formal", "Camisas", "Hombres"]
+        },
+        {
+            _id: "C002",
+            nombre: "Ana",
+            apellido: "Gómez",
+            fecha_nacimiento: '',
+            email: "ana.gomez@outlook.com",
+            categorias: ["Ropa Casual", "Vestidos", "Mujeres", "Accesorios"]
+        },
+        {
+            _id: "C003",
+            nombre: "Luis",
+            apellido: "Martínez",
+            fecha_nacimiento: "1988-11-30",
+            email: '',
+            categorias: ''
+        },
+        {
+            _id: "C004",
+            nombre: "María",
+            apellido: "López",
+            fecha_nacimiento: "1988-02-17",
+            email: "maria.lopez@yahoo.com",
+            categorias: ["Ropa de Invierno", "Chompas"]
+        },
+        {
+            _id: "C005",
+            nombre: "Sofía",
+            apellido: "Ramírez",
+            fecha_nacimiento: "1993-09-25",
+            email: "sofia.ramirez@outlook.com",
+            categorias: ["Ropa Casual", "Accesorios", "Mujeres"]
+        }
+    ]
+)
+
